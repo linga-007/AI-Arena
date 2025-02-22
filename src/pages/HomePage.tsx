@@ -10,15 +10,15 @@ const HomePage = () => {
   const [error, setError] = useState('');
   
   const eventDetails = {
-    name: "AI ARENA",
-    date: "February 21, 2025",
+    name: "BOT BATTLE",
+    date: "February 22, 2025",
     time: "9:00 AM - 2:00 PM",
     venue: "Full Stack Lab"
   };
 
   const handleEnterChallenge = () => {
     if (!teamName.trim()) {
-      setError('Please enter your team name');
+      setError('Please enter your participant number');
       return;
     }
 
@@ -97,12 +97,12 @@ const HomePage = () => {
             <div className="w-full max-w-md p-8 bg-gray-900 rounded-2xl shadow-2xl border border-purple-500/20">
               <div className="flex items-center mb-6">
                 <Users className="w-6 h-6 mr-3 text-purple-400" />
-                <h2 className="text-2xl font-bold text-white">Team Registration</h2>
+                <h2 className="text-2xl font-bold text-white">Participant Registration</h2>
               </div>
               
               <div className="mb-6">
                 <label htmlFor="teamName" className="block text-sm font-medium text-gray-300 mb-2">
-                  Enter Your Team Name
+                  Enter Your Participant Number
                 </label>
                 <input
                   type="text"
@@ -113,7 +113,7 @@ const HomePage = () => {
                     setError('');
                   }}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400"
-                  placeholder="Enter team name"
+                  placeholder="Enter participant number"
                 />
                 {error && <p className="mt-2 text-red-400 text-sm">{error}</p>}
               </div>

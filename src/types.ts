@@ -2,6 +2,7 @@ export interface Problem {
   id: number;
   title: string;
   description: string;
+  dataset_link : string;
 }
 
 export interface TimerState {
